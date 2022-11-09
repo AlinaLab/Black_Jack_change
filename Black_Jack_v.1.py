@@ -34,7 +34,7 @@ def player_turn():
     card_score = [cards_dict[k] for k in player_cards if k in cards_dict]
     player_sum_point = sum(card_score)
     print('Your cards are:', player_cards, ',that\'s:', player_sum_point, 'points.')
-    another_card = str(input('Another card or stop?\n').lower())
+    another_card = str(input('Another card (press ~1~) or stop (press any other number)?\n').lower())
     while another_card == '1':
         player_cards.append(random.choice(list(cards_dict.keys())))
         card_score = [cards_dict[k] for k in player_cards if k in cards_dict]
